@@ -1,0 +1,33 @@
+How a software is made ? 
+
+So a software is made in a very organized way. There are many important things in software Development life cycle or in short SDLC.
+
+A. Requirement ( Why we need this software, For whom it is for )
+B. Planning ( How software will work ? )
+C. Designing ( System Designing, Tech Stack )
+D. Development ( Frontend and Backend Development )
+E. Testing ( Does it match our Requirement and works properly )
+F. Deployment ( Publish the software for end user. )
+
+So there are many SDLC Models :
+i.e Waterfall, Agile, Big Bang etc
+
+In waterfall Model things will work step by step.
+1.First you have to decide all the Requirement
+2.After the Requirement process is completely finish than planning will start
+3.After planning Development will start 
+4.After Development testing will be done and software will be deployment to server.
+
+In waterfall model you are required to take next step only if first one is finished. And the drawback of this is took lots of time when client does'nt know the full requirement in starting.
+
+
+So AGILE model is the best approach in this case because in agile model you separate the development in parts.
+
+Where initial part of the software deployed. 
+Client review it and ask for changes and after approval development team will start working on other requirement.
+
+In AGILE model Operations have to deploy code and changes on server many time. and that can cause software leaks or downtime because of no proper instructions and communication between development and Operations teams. So in this case DevOps is useful.
+
+So what is devops ? 
+
+DevOps means bringing development team and Operations (deployment) team together by culture, tools, practices to publish code to end user in a secure, proper and efficient way.
