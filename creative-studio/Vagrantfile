@@ -1,0 +1,32 @@
+# Vagrant for centos server
+Vagrant.configure("2") do |config|
+    config.vm.box = "eurolinux-vagrant/centos-stream-9"
+    config.vm.hostname = "centos"
+
+    # Network configuration
+    config.vm.network "private_network", ip: "192.168.56.99"
+    config.vm.network "public_network"
+
+    # Provider configuration
+    config.vm.provider "virtualbox" do |vb|
+        vb.memory = 1024
+        vb.cpus = 2
+        vb.name = "centos"
+    end
+
+    # synced folder configuration
+    config.vm.synced_folder ".", "/vagrant"
+
+    # Provisioning configuration
+    config.vm.provision "shell", inline: <<-SHELL
+        dnf update -y
+        dnf install -y httpd
+        systemctl start httpd
+        systemctl enable httpd
+        mkdir -p /var/www/html
+        echo "Hello, World!" > /var/www/html/index.html
+        df -h >> /opt/disk_usage.txt
+        free -m >> /opt/memory_usage.txt
+        systemctl enable --now httpd
+    SHELL
+end
