@@ -1,0 +1,19 @@
+# Vagrant for centos server
+Vagrant.configure("2") do |config|
+    config.vm.box = "ubuntu/focal64"
+    config.vm.hostname = "ubuntu"
+
+    # Network configuration
+    config.vm.network "private_network", ip: "192.168.40.99"
+    config.vm.network "public_network"
+
+    # Provider configuration
+    config.vm.provider "virtualbox" do |vb|
+        vb.memory = 1024
+        vb.cpus = 2
+        vb.name = "ubuntu"
+    end
+
+    # synced folder configuration
+    config.vm.synced_folder ".", "/vagrant"
+end
