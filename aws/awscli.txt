@@ -22,3 +22,6 @@
 
 ## create a new access key for user
     aws iam create-access-key --user-name cliuser
+
+## terminate instance
+aws ec2 terminate-instances --instance-ids i-04378f3c67ec1ca39
