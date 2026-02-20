@@ -1,0 +1,24 @@
+## To install awscli we need to use below command
+    $ choco install awscli -y
+
+## Configure awscli
+    First we need to create an user in IAM and assign that user an access key
+    Then follow below steps
+    $ aws configure
+    AWS Access Key ID [None]: YOUR_KEY
+    AWS Secret Access Key [None]: YOUR_SECRET
+    Default region name [None]: REGION_THAT_USER_BELONG
+    Default output format [None]: DEFAULT_OUTPUT (json)
+
+## Check if user is connected properly with aws
+    use below command to check user details
+    $ aws sts get-caller-identity
+
+
+## use of awscli
+    Command structure
+    $ aws <command> <subcommand> [options and parameters]
+    $ aws s3 ls
+
+## create a new access key for user
+    aws iam create-access-key --user-name cliuser
